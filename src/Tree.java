@@ -7,10 +7,10 @@ import java.util.Random; //importing java random package
  */
 public class Tree implements Serializable {
 
-    private static final int MIN_YEAR = 2000;
-    private static final int MAX_YEAR = 24;
-    private static final int MIN_HEIGHT = 10;
-    private static final int MIN_GROWTH_RATE = 10;
+    private static final int MIN_YEAR_OF_PLANTING = 2000; // minimum year of planting
+    private static final int MAX_YEAR_OF_PLANTING = 24; // maximum year of planting
+    private static final int MIN_HEIGHT = 10; // minimum height of tree
+    private static final int MIN_GROWTH_RATE = 10; // minimum growth rate per year
 
 
     private TreeSpecies species; // The species of the tree
@@ -108,7 +108,7 @@ public class Tree implements Serializable {
         TreeSpecies[] species = TreeSpecies.values();
         TreeSpecies randomSpecies = species[random.nextInt(species.length)];
         // Random year between 2000 and 2024
-        int yearOfPlanting = MIN_YEAR + random.nextInt(MAX_YEAR + 1);
+        int yearOfPlanting = MIN_YEAR_OF_PLANTING + random.nextInt(MAX_YEAR_OF_PLANTING + 1);
         // Random height between 10 and 20, rounded to nearest whole number
         double height = Math.round(MIN_HEIGHT + random.nextDouble() * MIN_HEIGHT);
         // Random growth rate between 10% and 20%, rounded to one decimal place
