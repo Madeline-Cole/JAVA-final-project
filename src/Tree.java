@@ -23,7 +23,7 @@ public class Tree implements Serializable {
      */
     public enum TreeSpecies {
         BIRCH, MAPLE, FIR,
-    }
+    } //end of enum
 
     /**
      * Constructor for the Tree class.
