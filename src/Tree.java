@@ -7,6 +7,9 @@ import java.util.Random; //importing java random package
  */
 public class Tree implements Serializable {
 
+    private static final int MIN_YEAR = 2000;
+    private static final int MIN_HEIGHT = 10;
+
     private TreeSpecies species; // The species of the tree
     private int yearOfPlanting; // The year the tree was planted
     private double height; // The current height of the tree
@@ -32,7 +35,7 @@ public class Tree implements Serializable {
         this.yearOfPlanting = yearOfPlanting;
         this.height = height;
         this.growthRate = growthRate;
-    }
+    } //end of constructor
 
     /**
      * Returns a string representation of the Tree object.
@@ -41,7 +44,7 @@ public class Tree implements Serializable {
      */
     public String toString() {
         return this.species+ " " + this.yearOfPlanting + " " + this.height + "' " + this.growthRate + "%";
-    }
+    } //end of toString
 
     /**
      * Returns the year the tree was planted.
@@ -49,8 +52,9 @@ public class Tree implements Serializable {
      * @return The year the tree was planted.
      */
     public int getYearOfPlanting() {
+
         return(yearOfPlanting);
-    }
+    }//end of getYearofPlanting
 
     /**
      * Returns the species of the tree.
@@ -58,8 +62,9 @@ public class Tree implements Serializable {
      * @return The species of the tree.
      */
     public TreeSpecies getSpecies() {
+
         return(species);
-    }
+    } //end of getSpecies
 
     /**
      * Returns the current height of the tree.
@@ -68,7 +73,7 @@ public class Tree implements Serializable {
      */
     public double getHeight(){
         return(height);
-    }
+    } //end of getHeight
 
     /**
      * Returns the growth rate of the tree.
@@ -76,8 +81,9 @@ public class Tree implements Serializable {
      * @return The growth rate of the tree.
      */
     public double getGrowthRate() {
+
         return(growthRate);
-    }
+    } //end of getGrowthRate
 
     /**
      * Sets the height of the tree.
@@ -87,7 +93,7 @@ public class Tree implements Serializable {
     public void setHeight(double height){
 
         this.height = Math.round(height);
-    }
+    } //end of setHeight
 
     /**
      * Creates a random Tree object.
@@ -105,7 +111,7 @@ public class Tree implements Serializable {
         // Random growth rate between 10% and 20%, rounded to one decimal place
         double growthRate = Math.round((10 + random.nextDouble() * 10) * 10) / 10.0;
         return new Tree(randomSpecies, yearOfPlanting, height, growthRate);
-    }
+    } //end of makeRandomTree
 
-}
+} //end of tree class
 
